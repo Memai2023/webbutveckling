@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+    <html lang="sv">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="../css/styles.css" />
+            <title>FREYA PHOTOS Kontakt</title>
+        </head>
+    <body>
+        <header>
+            <input type="checkbox" name=" " id="toggler">
+            <label for="toggler" class="mobile-menu__trigger"></label>
+
+            <p class="logo">FREYA PHOTOS</p>
+            <nav class="menu">
+                <a href="../html/index.html">Hem</a>
+                <a href="../html/about.html">Om oss</a>
+                <a href="../html/photos.html">Foto</a>
+                <a href="../html/reviews.html">Omdöme</a>
+                <a class="activepage" href="../html/contact.html">Kontakt</a>
+            </nav>
+        </header>
+        <section class="contact-content">
+            <h1>Kontakta oss</h1>
+            <div class="contact-wrapper">
+                <form action="mailto:maria.hong26@gmail.com" method="post" enctype="text/plain">
+                    <fieldset>
+                        <legend>Dina uppgifter</legend>
+                        <div class="field">
+                            <label class="firstname" for="firstname">Förnamn</label>
+                            <input id="firstname" type="text" name="firstname" size="30" maxlength="100" placeholder="Ditt förnamn" required>
+                        </div>
+                        <div class="field">
+                            <label class="lastname" for="lastname">Efternamn</label>
+                            <input id="lastname" type="text" name="lastname" size="30" maxlength="100" placeholder="Ditt efternamn" required>
+                        </div>
+                        <div class="field">
+                            <label class="email" for="email">Efternamn</label>
+                            <input id="email" type="email" name="email" size="30" maxlength="100" placeholder="Din e-postadress" required>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Välj ditt ärende</legend>
+                    </fieldset>
+                    <fieldset>
+                    <div class="field checkbox">
+                        <label for="wedding"><input id="wedding" type="checkbox" value="wedding"> Bröllop</label>
+                        <label for="baby"><input id="baby" type="checkbox" value="baby"> Bebis</label>
+                        <label for="children"><input id="children" type="checkbox" value="children"> Barn</label>
+                        <label for="modelling"><input id="modelling" type="checkbox" value="modelling"> Modeller</label>
+                        <label for="others"><input id="others" type="checkbox" value="others"> Övrigt</label>
+                    </div>
+                    </fieldset>
+                <br/>
+                <fieldset>
+                    <legend>Meddelande</legend>
+                    <div class="field">
+                        <label for="subject">Vad gäller det?</label>
+                        <select id="subject" name="subject">
+                            <option value="qustions">Frågor</option>
+                            <option value="orders">Beställningar</option>
+                            <option value="price">Pris</option>
+                            <option value="other">Övrigt</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="message">Skriv ditt meddelande:</label>
+                        <textarea rows="4" cols="40" id="message" name="message" placeholder="Skriv här..." required=""></textarea>
+                    </div>
+                    <p>Samtycke</p>
+                    <em>I enlighet med de regler kring datalagring som finns krävs att du ger ditt medgivande för att kunna registrera ditt meddelande. Genom att klicka på knappen skicka godkänner du att vi får lagra dina uppgifter i vår databas.</em>
+                </fieldset>
+                <br/>
+                <div class="field">
+                        <input type="submit" value="Skicka">
+                    </div>
+                </form>
+            </div>
+        </section>
+        <footer>
+            <h3>STOCKHOLM</h3>
+            <h3>PARIS</h3>
+            <h3>LONDON</h3>
+            <h3>SYDNEY</h3>
+            <h3>TOKYO</h3>
+        </footer>    
+    </body>
+</html>

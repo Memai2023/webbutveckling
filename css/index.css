@@ -1,0 +1,529 @@
+/* My color Palette
+    _ _ _ _ _ _ _ _ 
+    Background: #ECDCDC // greypink
+    Background contact: #F4F3F3: light grey contactsite
+    Header/Footer: #361B1B // Brown
+    Menu-trigger: #FFF5F5 // light pink mobile
+    Button: #FAB9B9 // dark pink contactsite
+    Text-color: #FFFFFF // white
+    Text-color: #000000 // black
+    Text-color2: #FFF500 // yellow active link desktop
+    Text-color3: #7D2C2C // red active link mobile */
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    
+    html {
+        height: 100vh;
+    }
+    
+    body {
+        display: flex;
+        flex-direction: column;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin: 0;
+        min-height: 100%;
+    }
+    
+    header {
+        align-items: center;
+        background-color: #391B1B;
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+        color: #F4F3F3;
+        display: flex;
+        justify-content: space-between;
+        left: 0;
+        min-height: 75px;
+        padding: 16px 24px;
+        position: fixed;
+        right: 0;
+        top: 0;
+    }
+    
+    #toggler {
+        display: none;
+    }
+    
+    #toggler:checked ~ .menu {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    
+    .mobile-menu__trigger {
+        background-image: url("../images/MariasBurger.svg");
+        background-size: cover;
+        display: block;
+        height: 38px;
+        width: 38px;
+    }
+    
+    .logo {
+        font-size: 1.8rem;
+        padding-left: 20px;
+    }
+    
+    .menu {
+        background: #ECDCDC;
+        border-top: .1rem solid rgba(0, 0, 0, .1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        height: 100vh;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 100%;
+        z-index: 1000;
+    }
+    
+    .menu a {
+        background-color: #FFF5F5;
+        color: #000;
+        display: block;
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 1.3rem;
+        margin: 10px 0;
+        padding: 1.5rem;
+        text-decoration: none;
+    }
+    
+    .menu a:hover,
+    a.activepage  {
+        color: #7D2C2C;
+        font-weight: bolder;
+    }
+    
+    .main-content {
+        align-items: center;
+        display: flex;
+        flex: 1;
+        margin-top: 75px;
+        padding: 20px;
+    }
+    
+    footer {
+        align-items: stretch;
+        background-color: #391B1B;
+        box-shadow: 0 -.5rem 1rem rgba(0, 0, 0, .1);
+        color: #FFF;
+        display: flex;
+        flex-direction: row;
+        padding: 16px;
+        z-index: 1000;
+        justify-content: center;
+    }
+    
+    h3 {
+        margin: 8px;
+        text-align: center;
+        font-size: 0.8rem;
+      }
+    
+    @media screen and (min-width: 778px) {
+        #toggler {
+            display: none;
+        }
+    
+        .mobile-menu__trigger {
+            display: none;
+        }
+    
+        .logo {
+            font-size: 2rem;
+        }
+    
+        header {
+            display: flex;
+            padding: 8px 8px;
+            justify-content: space-between;
+        }
+    
+        .menu {
+            align-items: center;
+            background-color: unset;
+            border-top: unset;
+            clip-path: unset;
+            color: #fff;
+            display: flex;
+            font-size: 1.4rem;
+            justify-content: space-between;
+            left: 100px;
+            max-height: 75px;
+            position: static;
+            top: 100px;
+        }
+    
+        .menu a {
+            background: #391B1B;
+            border: unset;
+            color: #fff;
+            display: relative;
+            font-size: 1.2rem;
+            margin: 0 8px;
+            padding: 8px 8px;
+        }
+    
+        .menu a::after {
+            border-bottom: 2px solid #fff;
+            content: '';
+            display: block;
+            left: 50%;
+            padding: 0 0 0;
+            position: relative;
+            max-width: 0%;
+            transform: translateX(-50%);
+            transition: max-width 0.5s;
+            width: 100%;       
+        }
+    
+        .menu a:hover::after {
+            max-width: 100%;
+            padding: 0 10px;
+        }
+    
+        .menu a:hover,
+        a.activepage  {
+            color: #FFF500;
+            font-weight: bolder;
+        }
+    
+        h3 {
+            font-size: 1rem;
+            margin-left: 16px;
+            margin-right: 16px;
+        }
+    }
+    @media screen and (min-width: 900px) {
+        .logo {
+            font-size: 2.2rem;
+        }
+    
+        .menu {
+            font-size: 1.4rem;
+        }
+    
+        .menu a {
+            font-size: 1.5rem;
+            margin: 0 8px;
+            padding: 8px 8px;
+        }
+        .menu a:hover,
+        a.activepage  {
+            color: #FFF500;
+            font-weight: bolder;
+        }
+    
+        h3 {
+            font-size: 1.2rem;
+        }
+    }
+    
+    @media screen and (min-width: 1200px) {
+        .logo {
+            font-size: 2.5rem;
+        }
+    
+        header {
+            padding: 8px 48px;
+        }
+    
+        .menu a {
+            font-size: 2rem;
+            margin: 0 8px;
+            padding: 8px 8px;
+        }
+        .menu a:hover,
+        a.activepage  {
+            color: #FFF500;
+            font-weight: bolder;
+        }
+    }
+
+/* HOME page */
+
+.main-content {
+    align-items: flex-start;
+    background-color:  #fff2f2;
+    background-image: url('../images/front-girl.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex: 1;
+    font-size: 2rem;
+    margin-top: 75px;
+    padding: 40px 20px 20px 20px;
+    text-align: center;
+    justify-content: center;
+    }
+
+h1 {
+    color: #fff;
+    text-shadow: 0 0 12px #616161, 0 0 15px #000000;
+}
+
+.index-wrapper {
+    border-radius: 2%;
+    padding: 8px 0;
+}
+
+@media screen and (min-width: 768px) {
+
+    .index-wrapper {
+        margin: 3rem;
+    }
+    
+}
+
+/* ABOUT page  */
+
+.about-content {
+    align-items: center;
+    background-color: #ECDCDC;
+    flex-grow: 1;
+    display: flex;
+    margin-top: 75px;
+    padding: 40px 20px 20px 20px;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.image {
+   width: 300px;
+}
+
+.about-wrapper {
+    text-align: center;
+}
+
+.about-header {
+    padding: 32px;
+}
+
+.signature {
+    padding: 32px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+@media screen and (min-width: 778px) {
+    .about-content {
+        flex-direction: row;
+        max-width: 600%;
+    }
+
+    .image {
+        width: 380px;
+        height: 550px;
+        object-fit: cover;
+        object-position: 35%;
+    }
+
+    .about-wrapper {
+        padding: 48px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .about-content {
+        flex-direction: row;
+    }
+
+    .image {
+        width: 480px;
+        height: 550px;
+        object-fit: cover;
+        object-position: 35%;
+    }
+
+    .about-wrapper {
+        width: 500px;
+        margin: 0 auto;
+    }
+}
+
+    
+/* PHOTOS page */
+.photo-content {
+    align-items: center;
+    background-color: #ECDCDC;
+    flex-grow: 1;
+    display: flex;
+    margin-top: 75px;
+    padding: 40px 20px 20px 20px;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.photo-wrapper {
+    max-width: 680px;
+}
+
+.photo-header {
+    background-color: #361B1B;
+    color: #FFF;
+    padding: 16px;
+}
+
+.photo-images {
+    width: 100%;
+} 
+
+/* REVIEWS */
+
+.all-three {
+    flex-direction: column;
+    display: flex;
+    gap: 1rem;
+}
+.reviews-content {
+    align-items: center;
+    background-color: #ECDCDC;
+    flex-grow: 1;
+    display: flex;
+    margin-top: 75px;
+    padding: 40px 20px 20px 20px;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+.review-pic {
+    height: 200px;
+    width: 100px;
+    object-fit: cover;
+}
+.reviews-wrapping {
+    background-color: #FFF;
+    padding: 24px;
+}
+
+.reviews-info-wrapper {
+    display: flex;
+    align-items: center;
+}
+.review-heading2 {
+    background-color: black;
+    color: white;
+}
+
+.reviews-text-content {
+    text-align: center;
+    padding: 24px;
+}
+@media screen and (min-width: 900px) {
+    .all-three {
+        display: flex;
+        max-width: 880px;
+        gap: 1rem;
+    }
+
+    .reviews-wrapping {
+        
+    }
+}
+
+
+/* CONTACT page  */
+.contact-content {
+    align-items: center;
+    background-color: #ECDCDC;
+    flex-grow: 1;
+    display: flex;
+    margin-top: 75px;
+    padding: 40px 20px 20px 20px;
+    justify-content: center;
+}
+
+.contact-wrapper {
+    background-color: #FFF;
+    border-radius: 5px;
+    max-width: 500px;
+    margin: 00px auto;
+    padding: 10px 20px;
+}
+
+h2 {
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.contact-wrapper fieldset {
+    border: 0;
+}
+
+.contace-wrapper legend {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.contact-wrapper label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.field input[type=text],
+.field input[type=email],
+.field select,
+.field textarea {
+    background-color: #F4F3F3;
+    border-radius: 5px;
+    color: #333;
+    font-size: 1rem;
+    font-style: italic;
+    margin: 0;
+    margin-bottom: 30px;
+    outline: 0;
+    padding: 10px;
+    width: 100%;
+}
+
+.checkbox label,
+.checkbox input {
+    display: inline-block;
+}
+
+.field input[type="text"]:focus,
+.field input[type="email"]:focus,
+.field textarea:focus,
+.field select:focus {
+    background: #FFF;
+}
+
+.field input[type="submit"] {
+    background-color: #FAB9B9;
+    border: 2px solid #c75a5a;
+    color: #000;
+    display: block;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    padding: 8px 22px 8px 22px;
+    text-align: center;
+}
+
+.field input[type="submit"]:hover {
+    background: #ff1616;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.field input::placeholder,
+.filed textarea::placeholder {
+    font-style: italic;
+}
+
+.number {
+    background-color: #391B1B;
+    border-radius: 15px 15px 15px 0px; 
+    color: #FFF;
+    display: inline-block;
+    font-size: 1rem;
+    height: 30px;
+    line-height: 30px;
+    margin-right: 4px;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+    width: 30px;
+}
+
+
